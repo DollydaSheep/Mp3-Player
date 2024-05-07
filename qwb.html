@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mp3 Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <audio id="songAudio">
+        <source src="Hype Boy.mp3" type="audio/mpeg">
+    </audio>
+    <div class="sidebar">
+        <div class="logo">
+        </div>
+        <div class="items">
+            <h1>Home</h1>
+            <h1>Explore</h1>
+            <h1>Search</h1>
+            <h1>Playlists</h1>
+            <h1 id="demo"></h1>
+        </div>
+            
+    </div>
+    <div class="maintab">
+        <div class="playing">
+            <img src="https://i.scdn.co/image/ab67616d0000b2739d28fd01859073a3ae6ea209" class="img1">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/09/The_Strokes_-_Is_This_It_cover.png/220px-The_Strokes_-_Is_This_It_cover.png" class="img2">
+            <img src="https://i.redd.it/gasfefs3q6g61.jpg" class="img3">
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg" class="img4">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Gorillaz_2001_album.png" class="img5">
+            <img src="https://cdns-images.dzcdn.net/images/artist/097c694c7fa2786662633639dac927f7/500x500.jpg" class="img6">
+            <img src="https://cdns-images.dzcdn.net/images/cover/a26e476def6a65078e518e95a961fd7f/500x500.jpg" class="img7">
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/White_album_front2.jpg" class="img8">
+            <img src="https://f4.bcbits.com/img/a2136777183_10.jpg" class="img9">
+            <div class="play">
+                
+                <div class="title">
+                    <div onclick="playPause()"><i class="fa-solid fa-play" id="play"></i></div>
+                    <div>
+                        <h1 id="title1">Hype Boy</h1>
+                        <p id="artist1">NewJeans</p>
+                        
+                    </div>
+                </div>
+                <div class="duration">
+                    <p id="curr"></p>
+                    <p id="maxdur">0:00</p>
+                </div>
+                <div class="progbar">
+                    <div class="songProgress"></div>
+                    <input type="range" value="0" id="progress">
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="songs">
+            <div class="s">
+                <p id="num1">1</p>
+                <div onclick="song1()" class="hoverplay"><i class="fa-solid fa-play" id="hoverpl1"></i></div>
+                <img src="https://i.scdn.co/image/ab67616d0000b2739d28fd01859073a3ae6ea209">
+                <div class="details">
+                    <h2>Hype Boy</h2>
+                    <h3>NewJeans</h3>
+                </div>
+                <p>3:00</p>
+                <div class="ellipsis"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+            <div class="s">
+                <p id="num2">2</p>
+                <div onclick="song2()" class="hoverplay"><i class="fa-solid fa-play" id="hoverpl2"></i></div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/09/The_Strokes_-_Is_This_It_cover.png/220px-The_Strokes_-_Is_This_It_cover.png">
+                <div class="details">
+                    <h2>Last Nite</h2>
+                    <h3>The Strokes</h3>
+                </div>
+                <p>3:13</p>
+                <div class="ellipsis"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+            <div class="s">
+                <p id="num3">3</p>
+                <div onclick="song3()" class="hoverplay"><i class="fa-solid fa-play" id="hoverpl3"></i></div>
+                <img src="https://lastfm.freetls.fastly.net/i/u/ar0/8072079a49d57f02fd5b871d6c993bc1.jpg">
+                <div class="details">
+                    <h2>battlecry</h2>
+                    <h3>Nujabes</h3>
+                </div>
+                <p>3:16</p>
+                <div class="ellipsis"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+            <div class="s">
+                <p id="num4">4</p>
+                <div onclick="song4()" class="hoverplay"><i class="fa-solid fa-play" id="hoverpl4"></i></div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg">
+                <div class="details">
+                    <h2>Moonage Daydream</h2>
+                    <h3>David Bowie</h3>
+                </div>
+                <p>4:39</p>
+                <div class="ellipsis"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+            <div class="s">
+                <p id="num5">5</p>
+                <div onclick="song5()" class="hoverplay"><i class="fa-solid fa-play" id="hoverpl5"></i></div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Gorillaz_2001_album.png">
+                <div class="details">
+                    <h2>Tomorrow Comes Today</h2>
+                    <h3>Gorillaz</h3>
+                </div>
+                <p>3:14</p>
+                <div class="ellipsis"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+            <div class="s">
+                <p id="num6">6</p>
+                <div onclick="song6()" class="hoverplay"><i class="fa-solid fa-play" id="hoverpl6"></i></div>
+                <img src="https://cdns-images.dzcdn.net/images/artist/097c694c7fa2786662633639dac927f7/500x500.jpg">
+                <div class="details">
+                    <h2>Huwag Na Huwag Mong Sasabihin</h2>
+                    <h3>Kitchie Nadal</h3>
+                </div>
+                <p>4:09</p>
+                <div class="ellipsis"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+            <div class="s">
+                <p id="num7">7</p>
+                <div onclick="song7()" class="hoverplay"><i class="fa-solid fa-play" id="hoverpl7"></i></div>
+                <img src="https://cdns-images.dzcdn.net/images/cover/a26e476def6a65078e518e95a961fd7f/500x500.jpg">
+                <div class="details">
+                    <h2>Dancin (feat. Luvli)</h2>
+                    <h3>Aaron Smith</h3>
+                </div>
+                <p>3:14</p>
+                <div class="ellipsis"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+            <div class="s">
+                <p id="num8">8</p>
+                <div onclick="song8()" class="hoverplay"><i class="fa-solid fa-play" id="hoverpl8"></i></div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/White_album_front2.jpg">
+                <div class="details">
+                    <h2>Ob-La-Di, Ob-La-Da (2018 Mix)</h2>
+                    <h3>The Beatles</h3>
+                </div>
+                <p>3:08</p>
+                <div class="ellipsis"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+            <div class="s">
+                <p id="num9">9</p>
+                <div onclick="song9()" class="hoverplay"><i class="fa-solid fa-play" id="hoverpl9"></i></div>
+                <img src="https://f4.bcbits.com/img/a2136777183_10.jpg">
+                <div class="details">
+                    <h2>Di Na Babalik (Extended Version)</h2>
+                    <h3>Ang Bandang Shirley</h3>
+                </div>
+                <p>4:40</p>
+                <div class="ellipsis"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="player">
+        <img src="https://i.scdn.co/image/ab67616d0000b2739d28fd01859073a3ae6ea209" class="pimg1">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/09/The_Strokes_-_Is_This_It_cover.png/220px-The_Strokes_-_Is_This_It_cover.png" class="pimg2">
+        <img src="https://i.redd.it/gasfefs3q6g61.jpg" class="pimg3">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg" class="pimg4">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Gorillaz_2001_album.png" class="pimg5">
+        <img src="https://cdns-images.dzcdn.net/images/artist/097c694c7fa2786662633639dac927f7/500x500.jpg" class="pimg6">
+        <img src="https://cdns-images.dzcdn.net/images/cover/a26e476def6a65078e518e95a961fd7f/500x500.jpg" class="pimg7">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/White_album_front2.jpg" class="pimg8">
+        <img src="https://f4.bcbits.com/img/a2136777183_10.jpg" class="pimg9">
+        <div class="playerDetails">
+            <h1 id="titlep">Hype Boy</h1>
+            <p id="artistp">NewJeans</p>
+        </div>
+        <div class="playerPlay">
+            <div onclick="playPause()"><i class="fa-solid fa-play" id="play2"></i></div>
+        </div>
+        <div class="playerProg">
+            <p id="curr2">0:00</p>
+            <div>
+                <div class="playersongProgress"></div>
+                <input type="range" value="0" id="progressplay">
+            </div>
+            <p id="maxdur2">0:00</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
