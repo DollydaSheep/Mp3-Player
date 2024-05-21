@@ -40,7 +40,7 @@ body{
     width: 95%;
     box-sizing: border-box;
     background-color: #e5e6ef;
-    height: 50vh;
+    min-height: 50vmin;
     border-radius: 10px;
     display: flex;
     justify-content: flex-start;
@@ -51,13 +51,13 @@ body{
 .playing img{
     position: absolute;
     margin: 35px;
-    width: 40vh;
-    height: 40vh;
+    width: 250px;
+    height: 250px;
     border-radius: 5px;
     transition: 0.5s ease-out;
 }
 .play{
-    margin-left: 330px;
+    margin-left: 25vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
